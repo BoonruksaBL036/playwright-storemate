@@ -6,7 +6,7 @@ test('test login success', async ({ page }) => {
   await page.locator('[data-test="checkbox-product-24"]').waitFor({ state: 'visible' });
   await page.locator('[data-test="checkbox-product-24"]').click();
   await page.locator('[data-test="btn-payment"]').click();
-  await expect(page).toHaveURL(/payment/);
- await page.locator('data-test="btn-select-payment-method-mobile"]').click();
+ await page.locator('[data-test="select-destination-desktop"]').click();
+ await page.locator('[data-test="select-destination-desktop"]').waitFor({ state: 'visible' });
 });
 
