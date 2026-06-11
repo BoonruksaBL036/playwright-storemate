@@ -1,0 +1,15 @@
+{
+  "cookies": [
+    {
+      "name": "token",
+      "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2NjQyNTkwMDVAd2VibWFpbC5ucHJ1LmFjLnRoIiwidXNlcklkIjoyOSwicm9sZXMiOlsiVVNFUiJdLCJpYXQiOjE3NzM3ODQ2MDAsImV4cCI6MTc3NDM4OTQwMH0.8jHg8vRycqZK2PcYGOG5DmGI29iTodF1kGAV3nZfJ5uQOLnB9Y0WwByOEJXeM18vg7uGUXNtnnlbpCp3JzT5Jg",
+      "domain": "storemate-final.vercel.app",
+      "path": "/",
+      "expires": 1773871001,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": []
+}
