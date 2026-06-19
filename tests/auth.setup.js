@@ -1,4 +1,4 @@
-import { test as setup, expect } from '@playwright/test';
+import { test as setup, expect } from '../custom-test.js';
 import path from 'path';
 
 const authFile = path.join(__dirname, '../playwright/.auth/user.json');

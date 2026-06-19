@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from '../custom-test.js';
 
 test('(TC1001) การสมัครสมาชิก ', async ({ page }) => {
   await page.goto('https://storemate-final.vercel.app/');

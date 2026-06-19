@@ -32,12 +32,13 @@ export default defineConfig({
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+  // outputDir: 'results-folder',
   use: {
     actionTimeout: 60000,
     navigationTimeout: 60000,
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
-    screenshot: 'on',
+    // screenshot: 'on',
     // storageState: 'state.json',
     testIdAttribute: 'data-test',
   headless: true,

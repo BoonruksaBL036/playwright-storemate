@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from '../custom-test.js';
 
 test('test login success', async ({ page }) => {
   await page.goto('https://storemate-final.vercel.app/shopping-cart');
