@@ -1,18 +1,26 @@
 import { test, expect } from '../custom-test.js';
 
 test('(TC6001) การค้นหาสินค้าด้วย Keyword ', async ({ page }) => {
-  await page.goto('https://storemate-final.vercel.app/');
+  await page.goto('https://storemate-final.vercel.app/search');
   await page.waitForLoadState('networkidle');
-  await page.locator('[data-test="search"]').click();
-  await page.locator('[data-test="search-input"]').waitFor({ state: 'visible' });
-  await page.locator('[data-test="search-input"]').fill('น้ำ');
-  await page.locator('[data-test="search-input"]').press('Enter');
-  await page.waitForLoadState('networkidle');
+  await page.locator('[data-test="input-search"]').click();
+  await page.locator('[data-test="input-search"]').fill('แชมพู');
+  await page.locator('[data-test="apply-price-filter"]').click();
   
-  const productCount =
-    await page.locator('[data-test="product-card"]').count();
-  expect(productCount).toBeGreaterThan(0);
+  await expect(page.locator('[data-test="product-card"]').first()).toBeVisible()
+   await expect(async () => {
+  const resultText = await page
+    .locator('[data-test="filteredProduct"]')
+    .textContent();
 
+  const displayedCount = Number(resultText.match(/\d+/)[0]);
+
+  const actualCount = await page
+    .locator('[data-test="product-card"]:visible')
+    .count();
+
+  expect(actualCount).toBe(displayedCount);
+}).toPass();
 });
 
 test('(TC6002) การค้นหาสินค้าโดยใช้หมวดหมู่แบบไม่ระบุ Keyword', async ({ page }) => {
