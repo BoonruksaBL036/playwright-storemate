@@ -1,6 +1,6 @@
 import { test, expect } from '../custom-test.js';
 
-test('test login success', async ({ page }) => {
+test('order success', async ({ page }) => {
   await page.goto('https://storemate-final.vercel.app/shopping-cart');
   await page.waitForLoadState('domcontentloaded');
   await page.locator('[data-test="checkbox-product-24"]').waitFor({ state: 'visible' });
