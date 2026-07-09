@@ -14,10 +14,10 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   testDir: './tests',
-  timeout: 60000,
-  globalTimeout: 60000,
+  timeout: 30000,
+  globalTimeout: 30000,
   expect: {
-    timeout: 60000,
+    timeout: 30000,
   },
   // headless: false,
   // globalSetup: require.resolve('./global-config'),
@@ -34,8 +34,8 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   // outputDir: 'results-folder',
   use: {
-    actionTimeout: 60000,
-    navigationTimeout: 60000,
+    actionTimeout: 30000,
+    navigationTimeout: 30000,
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
     // screenshot: 'on',
