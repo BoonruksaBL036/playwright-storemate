@@ -34,7 +34,6 @@ export default defineConfig({
     // baseURL: 'http://localhost:3000',
     // screenshot: 'on',
     // storageState: 'state.json',
-    testIdAttribute: 'data-test',
   headless: true,
 
 
