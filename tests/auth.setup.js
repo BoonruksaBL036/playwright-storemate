@@ -13,6 +13,5 @@ setup('authenticate', async ({ page }) => {
   await page.locator('[data-test="btn-submit"]').click();
   await expect(page.getByRole('status')).toContainText('เข้าสู่ระบบสำเร็จ');
   await page.screenshot({ path: 'login-success.png' });
-
   await page.context().storageState({ path: authFile });
 });
